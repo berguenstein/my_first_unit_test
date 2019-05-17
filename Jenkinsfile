@@ -4,16 +4,16 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'cd HW_behaviour'
-        sh 'gcc main.c operations.c -o outputRun'
-        sh './outputRun'
+        bat 'cd HW_behaviour'
+        bat 'gcc main.c operations.c -o outputRun'
+        bat './outputRun'
       }
     }
     stage('Test') {
       steps {
-        sh 'cd tester_behaviour'
-        sh 'gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest'
-        sh './outputTest'
+        bat 'cd tester_behaviour'
+        bat 'gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest'
+        bat './outputTest'
       }
     }
   }
