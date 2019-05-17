@@ -1,10 +1,15 @@
 language: c
+stages:
+  - compile
+  - test
 jobs:
   include:
     -stage: compile
+      name: "building some files"
       before_script:
         - cd HW_behaviour
       script:
         - gcc main.c operations.c -o outputRun
     -stage: test
+      name: "running some files"
       - ./outputRun
