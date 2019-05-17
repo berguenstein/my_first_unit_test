@@ -7,13 +7,18 @@ stages:
 jobs:
   include:
     - stage: compile files
-      
       before_script:
         - cd HW_behaviour
       script:
-        - gcc main.c operations.c -o outputRun
+        - gcc main.c operations.c -o ~/$TRAVIS_BUILD_NUMBER/outputRun
+    - stage: compile files
+      before_script:
+        - cd tester_behaviour
+      script:
+        - gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o ~/$TRAVIS_BUILD_NUMBER/outputTest
+        
     - stage: run files
       before_script:
         - cd HW_behaviour
       script:
-        - ./outputRun
+        - .~/$TRAVIS_BUILD_NUMBER/outputRun
