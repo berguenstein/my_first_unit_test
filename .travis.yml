@@ -1,6 +1,6 @@
 language: c
 
-      before_script:
-        - cd HW_behaviour
-      script:
-        - gcc main.c operations.c -o outputRun
+before_script:
+  - cd HW_behaviour
+script:
+  - gcc main.c operations.c -o outputRun
