@@ -1,2 +1,2 @@
 language: c
-gcc main.c operations.c -o outputRun
+script: gcc main.c operations.c -o outputRun
