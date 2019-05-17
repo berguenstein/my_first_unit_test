@@ -1,4 +1,7 @@
 language: c
+stages:
+  - compile files
+  - run files
 jobs:
   include:
     -stage: compile files
