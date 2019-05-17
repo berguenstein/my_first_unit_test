@@ -1,14 +1,9 @@
 language: c
-- name: "go to the right directory"
+- name: "build the HW_behaviour code"
 - before_script:
   - cd ./HW_behaviour
-- name: "build the code"
 - script:
   - gcc main.c operations.c -o outputRun
-
-- name: "go to the right directory"
-- before_script:
-  - cd ./HW_behaviour
 - name: "run the code"
 - script:
   - ./outputRun
