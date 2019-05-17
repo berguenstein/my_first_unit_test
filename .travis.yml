@@ -1,9 +1,5 @@
 language: c
-stages:
-  - compile
-  - test
-jobs:
-  include:
+
     -stage: compile
       before_script:
         - cd HW_behaviour
