@@ -4,15 +4,12 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'cd HW_behaviour && gcc main.c operations.c -o outputRun'
-        bat './outputRun'
+        bat 'cd HW_behaviour && gcc main.c operations.c -o outputRun && outputRun.exe'
       }
     }
     stage('Test') {
       steps {
-        bat 'cd tester_behaviour'
-        bat 'gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest'
-        bat './outputTest'
+        bat 'cd tester_behaviour && gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest && outputTest.exe'
       }
     }
   }
