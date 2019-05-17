@@ -3,6 +3,5 @@ language: c
   - cd ./HW_behaviour
 - script:
   - gcc main.c operations.c -o outputRun
-  - name: "run the code"
   - ./outputRun
 
