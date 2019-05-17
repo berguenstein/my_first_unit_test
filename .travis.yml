@@ -4,6 +4,11 @@ stages:
   -name: compile files
   -name: run files
   
+env:
+  global:
+    # include $HOME/.local/bin for `aws`
+    - PATH=$HOME/.local/bin:$PATH
+    
 before_install:
   # set up awscli packages
   - pip install --user awscli
