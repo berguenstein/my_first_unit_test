@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        pipeline {
+        script {
           bat 'cd HW_behaviour'
           bat 'gcc main.c operations.c -o outputRun'
         }
