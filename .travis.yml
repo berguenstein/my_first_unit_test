@@ -13,7 +13,7 @@ before_install:
   # set up awscli packages
   - pip install --user awscli
   - mkdir -p ~/$BACKUP_EXEC_FILES
-  - aws s3 sync s3://travis-build-stages-shared-storage-test/$TRAVIS_BUILD_NUMBER ~/$BACKUP_EXEC_FILES
+  - aws s3 sync s3://travis-build-stages-shared-storage-test/$BACKUP_EXEC_FILES ~/$BACKUP_EXEC_FILES
   
 jobs:
   include:
