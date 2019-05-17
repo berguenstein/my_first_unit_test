@@ -1,7 +1,6 @@
 language: c
 jobs:
   include:
-    - stage: compile
     - name: "go to the right directory"
     - before_script:
       - cd ./HW_behaviour
@@ -9,7 +8,6 @@ jobs:
     - script:
       - gcc main.c operations.c -o outputRun
 
-    - stage: test
     - name: "go to the right directory"
     - before_script:
       - cd ./HW_behaviour
