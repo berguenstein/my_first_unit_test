@@ -1,5 +1,9 @@
 language: c
 
+stages:
+  - compile
+  - test
+  
 -stage: compile
   before_script:
     - cd HW_behaviour
@@ -10,4 +14,3 @@ language: c
     -cd HW_behaviour
   script:
     - ./outputRun
-		
