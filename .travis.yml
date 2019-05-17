@@ -1,7 +1,6 @@
 language: c
 
 -stage: compile
-  name: "building files HW_behaviour"
   before_script:
     - cd HW_behaviour
   script:
@@ -10,7 +9,6 @@ language: c
 
 
 -stage: test
-  name: "running HW_behaviour"
   before_script:
     - cd HW_behaviour
   script:
