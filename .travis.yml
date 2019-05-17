@@ -9,6 +9,3 @@ jobs:
         - cd HW_behaviour
       script:
         - gcc main.c operations.c -o outputRun
-    -stage: test
-      script:
-        - ./outputRun
