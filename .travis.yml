@@ -2,15 +2,18 @@ language: c
 jobs:
   include:
     - stage: compile
-    - name: "build1"
+    - name: "go to the right directory"
     - before_script:
       - cd HW_behaviour
+    - name: "build the code"
     - script:
       - gcc main.c operations.c -o outputRun
 
     - stage: test
+    - name: "go to the right directory"
     - before_script:
       - cd HW_behaviour
+    - name: "run the code"
     - script:
       - ./outputRun
 
