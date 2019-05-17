@@ -4,7 +4,7 @@ jobs:
     - stage: compile
     - name: "go to the right directory"
     - before_script:
-      - cd HW_behaviour
+      - cd ./HW_behaviour
     - name: "build the code"
     - script:
       - gcc main.c operations.c -o outputRun
@@ -12,7 +12,7 @@ jobs:
     - stage: test
     - name: "go to the right directory"
     - before_script:
-      - cd HW_behaviour
+      - cd ./HW_behaviour
     - name: "run the code"
     - script:
       - ./outputRun
