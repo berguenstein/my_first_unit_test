@@ -6,13 +6,14 @@ stages:
 
 jobs:
   include:
-    -stage: compile files
-     before_script:
-       - cd HW_behaviour
-     script:
-       - gcc main.c operations.c -o outputRun
-    -stage: run files
-     before_script:
-       - cd HW_behaviour
-     script:
-       - ./outputRun
+    - stage: compile files
+      
+      before_script:
+        - cd HW_behaviour
+      script:
+        - gcc main.c operations.c -o outputRun
+    - stage: run files
+      before_script:
+        - cd HW_behaviour
+      script:
+        - ./outputRun
