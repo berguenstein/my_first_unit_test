@@ -1,6 +1,22 @@
 language: c
-before_script:
-  - cd HW_behaviour
-script:
-  - gcc main.c operations.c -o outputRun
-  - ./outputRun
+jobs:
+  - stage: "building files HW_behaviour"
+    before_script:
+      - cd HW_behaviour
+    script:
+      - gcc main.c operations.c -o outputRun
+  - stage: "building files tester_behaviour"
+    before_script:
+      - cd tester_behaviour
+    script:
+      - gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest
+  - stage: "running HW_behaviour"
+    before_script:
+      - cd HW_behaviour
+    script:
+      - ./outputRun
+  - stage: "running tester_behaviour"
+    before_script:
+      -cd tester_behaviour
+    script:
+      ./outputTest
