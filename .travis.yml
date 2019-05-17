@@ -1,6 +1,6 @@
 language: c
 jobs:
-  -stage: build
+  -stage: compile
     name: "building files HW_behaviour"
     before_script:
       - cd HW_behaviour
