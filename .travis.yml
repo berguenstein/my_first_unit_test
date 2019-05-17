@@ -1,6 +1,0 @@
-language: c
-script:
-  - gcc HW_behaviour/main.c HW_behaviour/operations.c -o outputRun
-  - ./ outputRun
-  - gcc tester_behour/main.c tester_behaviour/unity/unity.c tester_behaviour/test_operations.c HW_behaviour/operations.c -o outputTest
-  - ./ outputTest

@@ -1,0 +1,4 @@
+language: c
+script:
+  - gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest
+  - ./ outputTest
