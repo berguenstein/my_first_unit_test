@@ -1,17 +1,15 @@
 language: c
-jobs:
-  include:
-    - name: "go to the right directory"
-    - before_script:
-      - cd ./HW_behaviour
-    - name: "build the code"
-    - script:
-      - gcc main.c operations.c -o outputRun
+- name: "go to the right directory"
+- before_script:
+  - cd ./HW_behaviour
+- name: "build the code"
+- script:
+  - gcc main.c operations.c -o outputRun
 
-    - name: "go to the right directory"
-    - before_script:
-      - cd ./HW_behaviour
-    - name: "run the code"
-    - script:
-      - ./outputRun
+- name: "go to the right directory"
+- before_script:
+  - cd ./HW_behaviour
+- name: "run the code"
+- script:
+  - ./outputRun
 
