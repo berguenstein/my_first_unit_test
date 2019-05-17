@@ -1,2 +1,9 @@
 language: c
-script: gcc main.c operations.c -o outputRun
+script:
+  - cd HW_behaviour
+  - gcc main.c operations.c -o outputRun
+  - ./ outputRun
+  - cd ..
+  - cd tester_behaviour
+  - gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest
+  - ./ outputTest
