@@ -1,6 +1,5 @@
 language: c
 
-    -stage: compile
       before_script:
         - cd HW_behaviour
       script:
