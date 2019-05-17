@@ -1,26 +1,27 @@
 language: c
 jobs:
-  -stage: compile
-    name: "building files HW_behaviour"
-    before_script:
-      - cd HW_behaviour
-    script:
-      - gcc main.c operations.c -o outputRun
-      
-    name: "building files tester_behaviour"
-    before_script:
-      - cd tester_behaviour
-    script:
-      - gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest
-  
-  -stage: test
-    name: "running HW_behaviour"
-    before_script:
-      - cd HW_behaviour
-    script:
-      - ./outputRun
-    name: "running tester_behaviour"
-    before_script:
-      -cd tester_behaviour
-    script:
-      ./outputTest
+  include:
+    -stage: compile
+      name: "building files HW_behaviour"
+      before_script:
+        - cd HW_behaviour
+      script:
+        - gcc main.c operations.c -o outputRun
+
+      name: "building files tester_behaviour"
+      before_script:
+        - cd tester_behaviour
+      script:
+        - gcc main.c unity/unity.c test_operations.c ../HW_behaviour/operations.c -o outputTest
+
+    -stage: test
+      name: "running HW_behaviour"
+      before_script:
+        - cd HW_behaviour
+      script:
+        - ./outputRun
+      name: "running tester_behaviour"
+      before_script:
+        -cd tester_behaviour
+      script:
+        ./outputTest
