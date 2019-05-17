@@ -3,4 +3,4 @@ before_script:
   - cd HW_behaviour
 script:
   - gcc main.c operations.c -o outputRun
-  - ./ outputRun
+  - ./outputRun
