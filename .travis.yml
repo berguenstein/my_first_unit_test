@@ -1,10 +1,8 @@
 language: c
-- name: "build the HW_behaviour code"
 - before_script:
   - cd ./HW_behaviour
 - script:
   - gcc main.c operations.c -o outputRun
-- name: "run the code"
-- script:
+  - name: "run the code"
   - ./outputRun
 
